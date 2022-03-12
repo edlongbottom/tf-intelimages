@@ -1,3 +1,9 @@
+# 
 experimentation/logs
 experimentation/.ipynb_checkpoints
 experimentation/kaggle.json
+
+#
+deployment/app/pexels_api.txt
+deployment/app/images
+deployment/app/__pycache__
