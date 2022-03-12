@@ -1,2 +1,3 @@
-notebooks/logs
-notebooks/.ipynb_checkpoints
+experimentation/logs
+experimentation/.ipynb_checkpoints
+experimentation/kaggle.json
