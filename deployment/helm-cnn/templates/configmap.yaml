@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ .Chart.Name }}-configs
+  namespace: {{ .Values.app.namespace }}
+  labels:
+    app: {{ .Chart.Name }}
+data:
+  MODEL_NAME: {{ .Values.model.modelName }}
+  MODEL_PATH: /models/{{ .Values.model.modelName }}

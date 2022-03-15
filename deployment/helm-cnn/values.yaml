@@ -1,0 +1,13 @@
+replicaCount: 1
+app:
+  namespace: model-serving
+  env: dev
+image:
+  repository: tensorflow/serving
+  tag: 2.6.0
+  pullPolicy: IfNotPresent
+service:
+  portName: tf-rest-api
+  containerPort: 8501
+model:
+  modelName: lenet5

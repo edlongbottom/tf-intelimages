@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ .Chart.Name }}-deployment
+  namespace: {{ .Values.app.namespace }}
+  labels:
+    app: {{ .Chart.Name }}
+    env: {{ .Values.app.env }}
+spec:
+  replicas: {{ .Values.replicaCount }}
+  selector:
+    matchLabels:
+      app: {{ .Chart.Name }}
+  template:
+    metadata:
+      labels:
+        app: {{ .Chart.Name }}
+    spec:
+      containers:
+      - name: {{ .Chart.Name }}
+        image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+        imagePullPolicy: {{ .Values.image.pullPolicy }}
+        envFrom:
+        - configMapRef:
+            name: {{ .Chart.Name }}-configs
+        ports: 
+        - name: {{ .Values.service.portName }}
+          containerPort: {{ .Values.service.containerPort }}
+        volumeMounts:
+          - name: {{ .Chart.Name }}-volume
+            mountPath: /models/{{ .Values.model.modelName }}
+      volumes:
+        - name: {{ .Chart.Name }}-volume
+          hostPath:
+            path: /var/tmp/{{ .Values.model.modelName }}
+            type: Directory
