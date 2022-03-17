@@ -5,7 +5,7 @@ experimentation/models
 experimentation/kaggle.json
 
 #
-deployment/app/pexels_api.txt
+#deployment/app/pexels_api.txt
 deployment/app/images
 deployment/app/__pycache__
 deployment/.ipynb_checkpoints

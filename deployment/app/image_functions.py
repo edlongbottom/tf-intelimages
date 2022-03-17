@@ -16,7 +16,7 @@ from PIL import Image
 def get_img(category, api_key, base_url="http://api.pexels.com/v1/"):
     '''Queries Pexels API for a single image and returns it in byte format'''
     r_search = requests.get(url=base_url+f"search?query={category}", headers={"Authorization": api_key})
-    i = random.randrange(0,len(r_search.json()["photos"]),1)    
+    i = random.randrange(0, len(r_search.json()["photos"]),1)    
     img_id = r_search.json()["photos"][i]['id']
 
     r_photo = requests.get(url=base_url+f"photos/{img_id}", headers={"Authorization": api_key})
