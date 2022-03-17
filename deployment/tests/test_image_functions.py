@@ -10,7 +10,8 @@ Unit tests for testing the functions in image_functions.py
 import os, sys
 import numpy as np
 
-BASE_DIR = 'C:\\Users\\eddlo\\Python\\Projects\\TF-images\\TF-IntelImages\\deployment'
+BASE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), os.pardir))
+MODELS_DIR = os.path.join(BASE_DIR,'models')
 sys.path.append(BASE_DIR)
 
 from app.image_functions import get_img, pull_imgs, convert_from_bytes, convert_from_jpeg
