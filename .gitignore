@@ -1,10 +1,9 @@
-# 
 experimentation/logs
 experimentation/.ipynb_checkpoints
 experimentation/models
 experimentation/kaggle.json
 
-#
+# UNCOMMENT API KEY IF REPO GOING PUBLIC
 #deployment/app/pexels_api.txt
 deployment/app/images
 deployment/app/__pycache__
