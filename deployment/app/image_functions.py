@@ -1,7 +1,7 @@
 """
 Image Functions
 
-Various functions for downloading images and converting them into numpy arrays 
+Various functions for downloading images and conversion to numpy arrays 
 
 """
 import io
