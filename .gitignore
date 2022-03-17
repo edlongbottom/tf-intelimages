@@ -9,6 +9,5 @@ deployment/app/pexels_api.txt
 deployment/app/images
 deployment/app/__pycache__
 deployment/.ipynb_checkpoints
-deployment/models/
 deployment/tests/__pycache__
 deployment/test/.pytest_cache
